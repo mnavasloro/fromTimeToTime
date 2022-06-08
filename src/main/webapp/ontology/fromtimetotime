@@ -1,0 +1,1578 @@
+@prefix : <https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#> .
+@prefix dc: <https://dublincore.org/specifications/dublin-core/dcmi-terms/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf1: <http://www.owl-ontologies.com/rdf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://fromtimetotime.linkeddata.es/ontology> .
+
+<https://fromtimetotime.linkeddata.es/ontology> rdf:type owl:Ontology ;
+                                                 owl:versionIRI <https://fromtimetotime.linkeddata.es/ontology/fromtimetotime> ;
+                                                 <https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#versionInfo> 1.0 ;
+                                                 rdfs:label "ft3" ;
+                                                 dc:creator "María Navas-Loro" ;
+                                                 dc:description "Ontology to support temporal information annotation" ;
+                                                 dc:license "http://creativecommons.org/licenses/cc-by/3.0/" ;
+                                                 dc:title "Ontology to support temporal information annotation." ,
+                                                          "fromTimeToTime" ;
+                                                 :vann:preferredNamespacePrefix "ft3" ;
+                                                 :vann:preferredNamespaceUri "https://fromtimetotime.linkeddata.es/ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#versionInfo
+<https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#versionInfo> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.owl-ontologies.com/rdf#type
+rdf1:type rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2005/11/its/rdf#taAnnotatorsRef
+<http://www.w3.org/2005/11/its/rdf#taAnnotatorsRef> rdf:type owl:AnnotationProperty ;
+                                                    rdf1:type owl:ObjectProperty ;
+                                                    rdfs:label "taannotatorsref" ;
+                                                    rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit> .
+
+
+###  http://www.w3.org/2005/11/its/rdf#taConfidence
+<http://www.w3.org/2005/11/its/rdf#taConfidence> rdf:type owl:AnnotationProperty ;
+                                                 rdf1:type owl:ObjectProperty ;
+                                                 rdfs:label "taconfidence" ;
+                                                 rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit> .
+
+
+###  https://dublincore.org/specifications/dublin-core/dcmi-terms/#creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://dublincore.org/specifications/dublin-core/dcmi-terms/#description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  https://dublincore.org/specifications/dublin-core/dcmi-terms/#license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  https://dublincore.org/specifications/dublin-core/dcmi-terms/#title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#vann:preferredNamespacePrefix
+:vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#vann:preferredNamespaceUri
+:vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#alternativeValue
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#alternativeValue> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                               rdfs:range owl:Thing ;
+                                                                               rdf1:type owl:ObjectProperty ;
+                                                                               rdfs:comment "An alternative way to represent the information provided by an Annotation; for instance, a sem:Time would be an alternative value for a  TIMEX3 annotation." ;
+                                                                               rdfs:label "alternativeValue" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#and
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#and> rdf:type owl:ObjectProperty ,
+                                                                           owl:SymmetricProperty ;
+                                                                  rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                  rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                  rdf1:type owl:ObjectProperty ;
+                                                                  rdfs:comment "AND relation to combine [TemporalExpressions](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression). in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)." ;
+                                                                  rdfs:label "and" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#annotationOf
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#annotationOf> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                           rdfs:range owl:Thing ;
+                                                                           rdf1:type owl:ObjectProperty ;
+                                                                           rdfs:comment "The information represented by an annotation." ;
+                                                                           rdfs:label "annotationOf" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#composedOf
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#composedOf> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                         rdfs:range [ rdf:type owl:Class ;
+                                                                                      owl:unionOf ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression>
+                                                                                                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression>
+                                                                                                  )
+                                                                                    ] ;
+                                                                         rdf1:type owl:ObjectProperty ;
+                                                                         rdfs:label "composedOf" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#followsSchema
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#followsSchema> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                            rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> ;
+                                                                            rdf1:type owl:ObjectProperty ;
+                                                                            rdfs:comment "Connects an Annotation with the AnnotationSchema it implements." ;
+                                                                            rdfs:label "followsSchema" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAnnotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAnnotation> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Document> ;
+                                                                            rdfs:range <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                            rdf1:type owl:ObjectProperty ;
+                                                                            rdfs:label "hasAnnotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf :argumentOf ;
+                                                                          rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                          rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "hasArgument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAspect
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAspect> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                        rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect> ;
+                                                                        rdf1:type owl:ObjectProperty ;
+                                                                        rdfs:label "hasaspect" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasBeginPoint
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasBeginPoint> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                            rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                            rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3beginPoint> ;
+                                                                            rdf1:type owl:ObjectProperty ;
+                                                                            rdfs:label "hasbeginpoint" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasCardinality
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasCardinality> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                             rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEcardinality> ;
+                                                                             rdf1:type owl:ObjectProperty ;
+                                                                             rdfs:label "hascardinality" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasClass
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasClass> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation> ;
+                                                                       rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+                                                                       rdf1:type owl:ObjectProperty ;
+                                                                       rdfs:label "hasclass" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEid> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation> ;
+                                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid> ;
+                                                                     rdf1:type owl:ObjectProperty ;
+                                                                     rdfs:label "haseid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEiid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEiid> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                      rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                      rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid> ;
+                                                                      rdf1:type owl:ObjectProperty ;
+                                                                      rdfs:label "haseiid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEndPoint
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEndPoint> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                          rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3endPoint> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "hasendpoint" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEventId
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEventId> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                         rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid> ;
+                                                                         rdf1:type owl:ObjectProperty ;
+                                                                         rdfs:label "haseventid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFreq
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFreq> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                      rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                      rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3freq> ;
+                                                                      rdf1:type owl:ObjectProperty ;
+                                                                      rdfs:label "hasfreq" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFunctionInDocument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFunctionInDocument> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                                    rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                                    rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+                                                                                    rdf1:type owl:ObjectProperty ;
+                                                                                    rdfs:label "hasfunctionindocument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasID
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasID> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                    rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> ;
+                                                                    rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> ;
+                                                                    rdf1:type owl:ObjectProperty ;
+                                                                    rdfs:label "hasID" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasId
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasId> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation> ;
+                                                                    rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid> ;
+                                                                    rdf1:type owl:ObjectProperty ;
+                                                                    rdfs:label "hasid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasMod
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasMod> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+                                                                     rdf1:type owl:ObjectProperty ;
+                                                                     rdfs:label "hasmod" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasModality
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasModality> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                          rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEmodality> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "hasmodality" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPolarity
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPolarity> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                          rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "haspolarity" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPos
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPos> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos> ;
+                                                                     rdf1:type owl:ObjectProperty ;
+                                                                     rdfs:label "haspos" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasQuant
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasQuant> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                       rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                       rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3quant> ;
+                                                                       rdf1:type owl:ObjectProperty ;
+                                                                       rdfs:label "hasquant" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasRestriction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasRestriction> rdf:type owl:ObjectProperty ;
+                                                                             rdfs:domain <http://www.w3.org/2006/time#Interval> ;
+                                                                             rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Restriction> ;
+                                                                             rdf1:type owl:ObjectProperty ;
+                                                                             rdfs:label "hasrestriction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSid> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation> ;
+                                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid> ;
+                                                                     rdf1:type owl:ObjectProperty ;
+                                                                     rdfs:label "hassid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSignalId
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSignalId> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                          rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "hassignalid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasStem
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasStem> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation> ;
+                                                                      rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTstem> ;
+                                                                      rdf1:type owl:ObjectProperty ;
+                                                                      rdfs:label "hasstem" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunction> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                                  rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                                  rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction> ;
+                                                                                  rdf1:type owl:ObjectProperty ;
+                                                                                  rdfs:label "hastemporalfunction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunctionID
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunctionID> rdf:type owl:ObjectProperty ;
+                                                                                    rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                                    rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                                    rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3TemporalFunctionID> ;
+                                                                                    rdf1:type owl:ObjectProperty ;
+                                                                                    rdfs:label "hastemporalfunctionID" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTense
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTense> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> ;
+                                                                       rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> ;
+                                                                       rdf1:type owl:ObjectProperty ;
+                                                                       rdfs:label "hasTense" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTid> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> ;
+                                                                     rdf1:type owl:ObjectProperty ;
+                                                                     rdfs:label "hastid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTimeUnit
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTimeUnit> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Times> ;
+                                                                          rdfs:range [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( <http://www.w3.org/2006/time#TimeUnit>
+                                                                                                     <https://sbmi.uth.edu/ontology/TEO.owl#TemporalInterval>
+                                                                                                   )
+                                                                                     ] ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "hasTimeUnit" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasType
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasType> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                      rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                      rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> ;
+                                                                      rdf1:type owl:ObjectProperty ;
+                                                                      rdfs:label "hastype" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValue
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValue> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                       rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                       rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value> ;
+                                                                       rdf1:type owl:ObjectProperty ;
+                                                                       rdfs:label "hasvalue" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValueFromFunction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValueFromFunction> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:subPropertyOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument> ;
+                                                                                   rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> ;
+                                                                                   rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3valueFromFunction> ;
+                                                                                   rdf1:type owl:ObjectProperty ;
+                                                                                   rdfs:label "hasvaluefromfunction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#instanceOf
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#instanceOf> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain owl:Thing ;
+                                                                         rdfs:range owl:Thing ;
+                                                                         rdf1:type owl:ObjectProperty ;
+                                                                         rdfs:label "instanceOf" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#not
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#not> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                  rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                  rdf1:type owl:ObjectProperty ;
+                                                                  rdfs:comment "NOT relation to negate a [TemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression) in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)." ;
+                                                                  rdfs:label "not" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#or
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#or> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                 rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> ;
+                                                                 rdf1:type owl:ObjectProperty ;
+                                                                 rdfs:comment "OR relation to combine [TemporalExpressions](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression) in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)." ;
+                                                                 rdfs:label "or" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionFrequency
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionFrequency> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RepetitiveTime> ;
+                                                                                  rdfs:range [ rdf:type owl:Class ;
+                                                                                               owl:unionOf ( <http://www.w3.org/2006/time#GeneralDateTimeDescription>
+                                                                                                             <http://www.w3.org/2006/time#GeneralDurationDescription>
+                                                                                                           )
+                                                                                             ] ;
+                                                                                  rdf1:type owl:ObjectProperty ;
+                                                                                  rdfs:label "repetitionFrequency" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionTimes
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionTimes> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RepetitiveTime> ;
+                                                                              rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Times> ;
+                                                                              rdf1:type owl:ObjectProperty ;
+                                                                              rdfs:label "repetitionTimes" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#representationOf
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#representationOf> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression> ;
+                                                                               rdfs:range <http://semanticweb.cs.vu.nl/2009/11/sem/#Time> ;
+                                                                               rdf1:type owl:ObjectProperty ;
+                                                                               rdfs:label "representationOf" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#validPeriod
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#validPeriod> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://semanticweb.cs.vu.nl/2009/11/sem/#Time> ;
+                                                                          rdfs:range <http://www.w3.org/2006/time#Interval> ;
+                                                                          rdf1:type owl:ObjectProperty ;
+                                                                          rdfs:label "validPeriod" .
+
+
+###  http://groundedannotationframework.org/files/2014/01/gaf.rdfdenotes
+<http://groundedannotationframework.org/files/2014/01/gaf.rdfdenotes> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://groundedannotationframework.org/files/2014/01/gaf.rdfMention> ;
+                                                                      rdfs:range <http://groundedannotationframework.org/files/2014/01/gaf.rdfInstance> ;
+                                                                      rdf1:type owl:ObjectProperty ;
+                                                                      rdfs:label "denotes" .
+
+
+###  http://semanticweb.cs.vu.nl/2009/11/sem/#eventType
+<http://semanticweb.cs.vu.nl/2009/11/sem/#eventType> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventSchematization> ;
+                                                     rdfs:range <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventFormalization> ;
+                                                     rdf1:type owl:ObjectProperty ;
+                                                     rdfs:label "eventType" .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:ObjectProperty ,
+                                                          owl:SymmetricProperty ;
+                                                 rdfs:domain owl:Thing ;
+                                                 rdfs:range owl:Thing ;
+                                                 rdf1:type owl:ObjectProperty ;
+                                                 rdfs:label "closematch" .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                              rdfs:range <http://groundedannotationframework.org/files/2014/01/gaf.rdfMention> ;
+                                              rdf1:type owl:ObjectProperty ;
+                                              rdfs:label "related" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#argumentOf
+:argumentOf rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+            rdfs:range <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+            rdf1:type owl:ObjectProperty ;
+            rdfs:label "argumentOf" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Document> ;
+          rdfs:range <http://semanticweb.cs.vu.nl/2009/11/sem/#Event> ;
+          rdfs:label "hasEvent" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.owl-ontologies.com/rdf#value
+rdf1:value rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value> ;
+           rdfs:range xsd:string ;
+           rdf1:type owl:DatatypeProperty ;
+           rdfs:label "value" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> rdf:type owl:Class ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "Allows to represent and associate an annotation format to the different annotations in a document." ;
+                                                                               rdfs:label "AnnotationSchema" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> rdf:type owl:Class ;
+                                                                       rdf1:type owl:Class ;
+                                                                       rdfs:comment "Abstract class to represent the arguments of the different  annotation standards."@en ;
+                                                                       rdfs:label "Argument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression> ;
+                                                                                         rdf1:type owl:Class ;
+                                                                                         rdfs:comment "This class allows to create a composed temporal expression, combining different temporal expressions with the operators OR, AND or NOT." ;
+                                                                                         rdfs:label "ComposedTemporalExpression" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Document
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Document> rdf:type owl:Class ;
+                                                                       rdf1:type owl:Class ;
+                                                                       rdfs:comment "Class to represent an annotated document." ;
+                                                                       rdfs:label "Document" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasClass> ;
+                                                                                                owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass>
+                                                                                              ] ,
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEid> ;
+                                                                                                owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid>
+                                                                                              ] ;
+                                                                              rdf1:type owl:Class ;
+                                                                              rdfs:comment "Annotation of the type EVENT from the TimeML standard" ;
+                                                                              rdfs:label "EVENTannotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+                                                                            rdf1:type owl:Class ;
+                                                                            rdfs:comment "Abstract class of the arguments of the EVENT annotation from the TimeML annotation standard."@en ;
+                                                                            rdfs:label "EVENTargument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument> ;
+                                                                         rdf1:type owl:Class ;
+                                                                         rdfs:comment "Argument CLASS of a EVENT annotation from the TimeML annotation standard."@en ;
+                                                                         rdfs:label "EVENTclass" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument> ,
+                                                                                       <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> ,
+                                                                                       <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                       rdf1:type owl:Class ;
+                                                                       rdfs:comment "Argument EID of a EVENT annotation from the TimeML annotation standard."@en ;
+                                                                       rdfs:label "EVENTeid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTstem
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTstem> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument> ;
+                                                                        rdf1:type owl:Class ;
+                                                                        rdfs:comment "Argument STEM of a EVENT annotation from the TimeML annotation standard."@en ;
+                                                                        rdfs:label "EVENTstem" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventFormalization
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventFormalization> rdf:type owl:Class ;
+                                                                                 rdf1:type owl:Class ;
+                                                                                 rdfs:comment "A formal representation of an event, such as a frame from Framenet, VerbNet or another semantic repository." ;
+                                                                                 rdfs:label "EventFormalization" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventInstance
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventInstance> rdf:type owl:Class ;
+                                                                            rdf1:type owl:Class ;
+                                                                            rdfs:comment "An instance of an event. In the example \"he went jogging on Tuesday and Wednesday\", there would be one mention but two instances: one on Tuesday and another one on Wednesday." ;
+                                                                            rdfs:label "EventInstance" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventMention
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventMention> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf owl:Thing ;
+                                                                           rdf1:type owl:Class ;
+                                                                           rdfs:comment "The textual mention of an event." ;
+                                                                           rdfs:label "EventMention" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventSchematization
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventSchematization> rdf:type owl:Class ;
+                                                                                  rdf1:type owl:Class ;
+                                                                                  rdfs:comment "The schematic representation of an event." ;
+                                                                                  rdfs:label "EventSchematization" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                                     rdf1:type owl:Class ;
+                                                                                     rdfs:comment "Annotation from the EventsMatter corpus format. It allows to represent events through annotations of different types (when, what, who, event) sharing an id." ;
+                                                                                     rdfs:label "EventsMatterAnnotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> ;
+                                                                                rdf1:type owl:Class ;
+                                                                                rdfs:comment "Annotation from the EventsMatter corpus format. It allows to represent the context of an event." ;
+                                                                                rdfs:label "EventsMatterEvent" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_what
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_what> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> ;
+                                                                                     rdf1:type owl:Class ;
+                                                                                     rdfs:comment "Annotation from the EventsMatter corpus format. It allows to represent the core of an event, meaning what happened." ;
+                                                                                     rdfs:label "EventsMatterEvent_what" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_when
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_when> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> ;
+                                                                                     rdf1:type owl:Class ;
+                                                                                     rdfs:comment "Annotation from the EventsMatter corpus format. It allows to represent the when an event happened." ;
+                                                                                     rdfs:label "EventsMatterEvent_when" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_who
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_who> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation> ;
+                                                                                    rdf1:type owl:Class ;
+                                                                                    rdfs:comment "Annotation from the EventsMatter corpus format. It allows to represent the who carried out the event." ;
+                                                                                    rdfs:label "EventsMatterEvent_who" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> rdf:type owl:Class ;
+                                                                 rdf1:type owl:Class ;
+                                                                 rdfs:comment "Identifier of an annotation." ;
+                                                                 rdfs:label "ID" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ,
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEiid> ;
+                                                                                                       owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid>
+                                                                                                     ] ;
+                                                                                     rdf1:type owl:Class ;
+                                                                                     rdfs:comment "Annotation of the type MAKEINSTANCE  from the TimeML standard. It represents instances of events." ;
+                                                                                     rdfs:label "MAKEINSTANCEannotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+                                                                                   rdf1:type owl:Class ;
+                                                                                   rdfs:comment "Abstract class of the arguments of the MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                   rdfs:label "MAKEINSTANCEargument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                                 rdf1:type owl:Class ;
+                                                                                 rdfs:comment "Argument ASPECT of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                 rdfs:label "MAKEINSTANCEaspect" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEcardinality
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEcardinality> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                                      rdf1:type owl:Class ;
+                                                                                      rdfs:comment "Argument CARDINALITY of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                      rdfs:label "MAKEINSTANCEcardinality" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> ,
+                                                                                               <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "Argument EIID of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                               rdfs:label "MAKEINSTANCEeiid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEmodality
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEmodality> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                                   rdf1:type owl:Class ;
+                                                                                   rdfs:comment "Argument MODALITY of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                   rdfs:label "MAKEINSTANCEmodality" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                                   rdf1:type owl:Class ;
+                                                                                   rdfs:comment "Argument POLARITY of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                   rdfs:label "MAKEINSTANCEpolarity" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                              rdf1:type owl:Class ;
+                                                                              rdfs:comment "Argument POS of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                              rdfs:label "MAKEINSTANCEpos" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument> ;
+                                                                                rdf1:type owl:Class ;
+                                                                                rdfs:comment "Argument TENSE of a MAKEINSTANCE annotation from the TimeML annotation standard."@en ;
+                                                                                rdfs:label "MAKEINSTANCEtense" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RepetitiveTime
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RepetitiveTime> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://semanticweb.cs.vu.nl/2009/11/sem/#Time> ;
+                                                                             rdf1:type owl:Class ;
+                                                                             rdfs:comment "Represents a temporal expression that repeats over time (e.g. Once a week). In the TimeML standard it would correspond to a SET temporal expression." ;
+                                                                             rdfs:label "RepetitiveTime" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Restriction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Restriction> rdf:type owl:Class ;
+                                                                          rdf1:type owl:Class ;
+                                                                          rdfs:comment "Any possible restriction to a sem:Time class." ;
+                                                                          rdfs:label "Restriction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "Annotation of the type SIGNAL from the TimeML standard. It allows to mark up words with a temporal meaning that are not relations, temporal expressions or events." ;
+                                                                               rdfs:label "SIGNALannotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALargument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALargument> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+                                                                             rdf1:type owl:Class ;
+                                                                             rdfs:comment "Abstract class of the arguments of the SIGNAL annotation from the TimeML annotation standard."@en ;
+                                                                             rdfs:label "SIGNALargument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> ,
+                                                                                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALargument> ;
+                                                                        rdf1:type owl:Class ;
+                                                                        rdfs:comment "Argument SID of a SIGNAL annotation from the TimeML annotation standard."@en ;
+                                                                        rdfs:label "SIGNALsid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3TemporalFunctionID
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3TemporalFunctionID> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> ;
+                                                                                       rdf1:type owl:Class ;
+                                                                                       rdfs:comment "Argument TIMEX3TemporalFunctionID of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                                       rdfs:label "TIMEX3TemporalFunctionID" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTid> ;
+                                                                                                 owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasType> ;
+                                                                                                 owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type>
+                                                                                               ] ,
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValue> ;
+                                                                                                 owl:allValuesFrom <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value>
+                                                                                               ] ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "Annotation of the type TIMEX3 from the TimeML standard. It allows to represent temporal expressions (dates, times...)" ;
+                                                                               rdfs:label "TIMEX3annotation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument> ;
+                                                                             rdf1:type owl:Class ;
+                                                                             rdfs:label "TIMEX3argument" ;
+                                                                             dc:description "Abstract class of the arguments of the TIMEX3 annotation from the TimeML annotation standard."@en .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3beginPoint
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3beginPoint> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "Argument TIMEX3beginPoint of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                               rdfs:label "TIMEX3beginPoint" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3endPoint
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3endPoint> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> ;
+                                                                             rdf1:type owl:Class ;
+                                                                             rdfs:comment "Argument TIMEX3endPoint of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                             rdfs:label "TIMEX3endPoint" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3freq
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3freq> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                         rdf1:type owl:Class ;
+                                                                         rdfs:comment "Argument FREQ of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                         rdfs:label "TIMEX3freq" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                                       rdf1:type owl:Class ;
+                                                                                       rdfs:comment "Argument functionInDocument of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                                       rdfs:label "TIMEX3functionInDocument" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                        rdf1:type owl:Class ;
+                                                                        rdfs:comment "Argument MOD of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                        rdfs:label "TIMEX3mod" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3quant
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3quant> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                          rdf1:type owl:Class ;
+                                                                          rdfs:comment "Argument QUANT of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                          rdfs:label "TIMEX3quant" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                                     rdf1:type owl:Class ;
+                                                                                     rdfs:comment "Argument temporalFunction of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                                     rdfs:label "TIMEX3temporalFunction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID> ,
+                                                                                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                        rdf1:type owl:Class ;
+                                                                        rdfs:comment "Argument TID of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                        rdfs:label "TIMEX3tid" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ,
+                                                                                         <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> ;
+                                                                         rdf1:type owl:Class ;
+                                                                         rdfs:comment "Argument TYPE of a TIMEX3 annotation from the TimeML annotation standard. It can be ft3:DATE, ft3:SET, ft3:DURATION or ft3:TIME."@en ;
+                                                                         rdfs:label "TIMEX3type" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument> ;
+                                                                          rdf1:type owl:Class ;
+                                                                          rdfs:comment "Argument VALUE of a TIMEX3 annotation from the TimeML annotation standard. It can take different formats depending on the TYPE of annotation."@en ;
+                                                                          rdfs:label "TIMEX3value" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3valueFromFunction
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3valueFromFunction> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid> ;
+                                                                                      rdf1:type owl:Class ;
+                                                                                      rdfs:comment "Argument valueFromFunction of a TIMEX3 annotation from the TimeML annotation standard."@en ;
+                                                                                      rdfs:label "TIMEX3valueFromFunction" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression> rdf:type owl:Class ;
+                                                                                 rdf1:type owl:Class ;
+                                                                                 rdfs:comment "This class represents a temporal expression, meaning a expression representing any temporal reference." ;
+                                                                                 rdfs:label "TemporalExpression" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalRelation
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalRelation> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Restriction> ;
+                                                                               rdf1:type owl:Class ;
+                                                                               rdfs:comment "A possible restriction to a sem:Time expression is a temporal relation, such as \"before\"" ;
+                                                                               rdfs:label "TemporalRelation" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Times
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Times> rdf:type owl:Class ;
+                                                                    rdf1:type owl:Class ;
+                                                                    rdfs:comment "Represents the repetition times of a repetitive expression, with an amount (value) and timeunit." ;
+                                                                    rdfs:label "Times" .
+
+
+###  http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> rdf:type owl:Class ;
+                                                                   rdf1:type owl:Class ;
+                                                                   rdfs:comment "Represents the type of an annotation." ;
+                                                                   rdfs:label "Type" .
+
+
+###  http://groundedannotationframework.org/files/2014/01/gaf.rdfInstance
+<http://groundedannotationframework.org/files/2014/01/gaf.rdfInstance> rdf:type owl:Class ;
+                                                                       rdf1:type owl:Class ;
+                                                                       rdfs:comment "Class Instance from GAF, representing an instance of an annotation in text." ;
+                                                                       rdfs:label "Instance" .
+
+
+###  http://groundedannotationframework.org/files/2014/01/gaf.rdfMention
+<http://groundedannotationframework.org/files/2014/01/gaf.rdfMention> rdf:type owl:Class ;
+                                                                      rdf1:type owl:Class ;
+                                                                      rdfs:comment "Class Mention from GAF, representing a mention of an annotation in text." ;
+                                                                      rdfs:label "Mention" .
+
+
+###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> rdf:type owl:Class ;
+                                                                            owl:equivalentClass <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit> ;
+                                                                            rdf1:type owl:Class ;
+                                                                            rdfs:comment "Represenents an annotation of any kind, usually NLP." ;
+                                                                            rdfs:label "Annotation" .
+
+
+###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit> rdf:type owl:Class ;
+                                                                                rdf1:type owl:Class ;
+                                                                                rdfs:comment "Represenents an annotation of any kind, usually NLP." ;
+                                                                                rdfs:label "annotationUnit" .
+
+
+###  http://semanticweb.cs.vu.nl/2009/11/sem/#Actor
+<http://semanticweb.cs.vu.nl/2009/11/sem/#Actor> rdf:type owl:Class ;
+                                                 rdf1:type owl:Class ;
+                                                 rdfs:comment "Represents an entity involved in an Event, usually who carried out the action." ;
+                                                 rdfs:label "Actor" .
+
+
+###  http://semanticweb.cs.vu.nl/2009/11/sem/#Event
+<http://semanticweb.cs.vu.nl/2009/11/sem/#Event> rdf:type owl:Class ;
+                                                 rdf1:type owl:Class ;
+                                                 rdfs:comment "Represents an event, in the broadest sense of the term." ;
+                                                 rdfs:label "Event" .
+
+
+###  http://semanticweb.cs.vu.nl/2009/11/sem/#Time
+<http://semanticweb.cs.vu.nl/2009/11/sem/#Time> rdf:type owl:Class ;
+                                                rdf1:type owl:Class ;
+                                                rdfs:comment "This class represents the information of any temporal expression." ;
+                                                rdfs:label "Time" .
+
+
+###  http://www.w3.org/2006/time#GeneralDateTimeDescription
+<http://www.w3.org/2006/time#GeneralDateTimeDescription> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://semanticweb.cs.vu.nl/2009/11/sem/#Time> ;
+                                                         rdf1:type owl:Class ;
+                                                         rdfs:comment "Represents a time/date temporal expression  (e.g. Tomorrow at eight o'clock). In the TimeML standard it would correspond to a DATE or a TIME temporal expression." ;
+                                                         rdfs:label "GeneralDateTimeDescription" .
+
+
+###  http://www.w3.org/2006/time#GeneralDurationDescription
+<http://www.w3.org/2006/time#GeneralDurationDescription> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://semanticweb.cs.vu.nl/2009/11/sem/#Time> ;
+                                                         rdf1:type owl:Class ;
+                                                         rdfs:comment "Represents a duration temporal expression (e.g. Two days). In the TimeML standard it would correspond to a DURATION temporal expression." ;
+                                                         rdfs:label "GeneralDurationDescription" .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdf1:type owl:Class ;
+                                       rdfs:comment "Interval representation from the TimeOntology." ;
+                                       rdfs:label "Interval" .
+
+
+###  http://www.w3.org/2006/time#TimeUnit
+<http://www.w3.org/2006/time#TimeUnit> rdf:type owl:Class ;
+                                       rdf1:type owl:Class ;
+                                       rdfs:comment "Describes the granularity of the repretition in a repetitive temporal expression." ;
+                                       rdfs:label "TimeUnit" .
+
+
+###  https://sbmi.uth.edu/ontology/TEO.owl#PeriodicTimeInterval
+<https://sbmi.uth.edu/ontology/TEO.owl#PeriodicTimeInterval> rdf:type owl:Class ;
+                                                             rdf1:type owl:Class ;
+                                                             rdfs:comment "Periodic Time Interval is a possible way to represent a periodic event in the TEO ontology." ;
+                                                             rdfs:label "PeriodicTimeInterval" .
+
+
+###  https://sbmi.uth.edu/ontology/TEO.owl#TemporalInterval
+<https://sbmi.uth.edu/ontology/TEO.owl#TemporalInterval> rdf:type owl:Class ;
+                                                         rdf1:type owl:Class ;
+                                                         rdfs:comment "Represents an interval from the TEO ontology." ;
+                                                         rdfs:label "TemporalInterval" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ACE2005
+:ACE2005 rdf:type owl:NamedIndividual ,
+                  <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> ;
+         rdfs:label "ACE2005" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AFTER
+:AFTER rdf:type owl:NamedIndividual ,
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+       rdfs:label "AFTER" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#APPROX
+:APPROX rdf:type owl:NamedIndividual ,
+                 <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+        rdfs:label "APPROX" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ASPECTUAL
+:ASPECTUAL rdf:type owl:NamedIndividual ,
+                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+           rdfs:label "ASPECTUAL" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#BEFORE
+:BEFORE rdf:type owl:NamedIndividual ,
+                 <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+        rdfs:label "BEFORE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#CREATION_TIME
+:CREATION_TIME rdf:type owl:NamedIndividual ,
+                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+               rdfs:label "CREATION_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DATE
+:DATE rdf:type owl:NamedIndividual ,
+               <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> ;
+      rdfs:label "DATE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DURATION
+:DURATION rdf:type owl:NamedIndividual ,
+                   <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> ;
+          rdfs:label "DURATION" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#END
+:END rdf:type owl:NamedIndividual ,
+              <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+     rdfs:label "END" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_LESS
+:EQUAL_OR_LESS rdf:type owl:NamedIndividual ,
+                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+               rdfs:label "EQUAL_OR_LESS" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_MORE
+:EQUAL_OR_MORE rdf:type owl:NamedIndividual ,
+                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+               rdfs:label "EQUAL_OR_MORE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EXPIRATION_TIME
+:EXPIRATION_TIME rdf:type owl:NamedIndividual ,
+                          <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+                 rdfs:label "EXPIRATION_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatter
+:EventsMatter rdf:type owl:NamedIndividual ,
+                       <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> ;
+              rdfs:label "EventsMatter" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_ACTION
+:I_ACTION rdf:type owl:NamedIndividual ,
+                   <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+          rdfs:label "I_ACTION" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_STATE
+:I_STATE rdf:type owl:NamedIndividual ,
+                  <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+         rdfs:label "I_STATE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#LESS_THAN
+:LESS_THAN rdf:type owl:NamedIndividual ,
+                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+           rdfs:label "LESS_THAN" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MID
+:MID rdf:type owl:NamedIndividual ,
+              <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+     rdfs:label "MID" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MODIFICATION_TIME
+:MODIFICATION_TIME rdf:type owl:NamedIndividual ,
+                            <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+                   rdfs:label "MODIFICATION_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MORE_THAN
+:MORE_THAN rdf:type owl:NamedIndividual ,
+                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+           rdfs:label "MORE_THAN" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#NEG
+:NEG rdf:type owl:NamedIndividual ,
+              <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity> ;
+     rdfs:label "NEG" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#OCCURRENCE
+:OCCURRENCE rdf:type owl:NamedIndividual ,
+                     <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+            rdfs:label "OCCURRENCE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_AFTER
+:ON_OR_AFTER rdf:type owl:NamedIndividual ,
+                      <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+             rdfs:label "ON_OR_AFTER" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_BEFORE
+:ON_OR_BEFORE rdf:type owl:NamedIndividual ,
+                       <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+              rdfs:label "ON_OR_BEFORE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PAST
+:PAST rdf:type owl:NamedIndividual ,
+               <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> ;
+      rdfs:label "PAST" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PERCEPTION
+:PERCEPTION rdf:type owl:NamedIndividual ,
+                     <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+            rdfs:label "PERCEPTION" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#POS
+:POS rdf:type owl:NamedIndividual ,
+              <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity> ;
+     rdfs:label "POS" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PUBLICATION_TIME
+:PUBLICATION_TIME rdf:type owl:NamedIndividual ,
+                           <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+                  rdfs:label "PUBLICATION_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RECEPTION_TIME
+:RECEPTION_TIME rdf:type owl:NamedIndividual ,
+                         <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+                rdfs:label "RECEPTION_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RELEASE_TIME
+:RELEASE_TIME rdf:type owl:NamedIndividual ,
+                       <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ;
+              rdfs:label "RELEASE_TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#REPORTING
+:REPORTING rdf:type owl:NamedIndividual ,
+                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+           rdfs:label "REPORTING" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SET
+:SET rdf:type owl:NamedIndividual ,
+              <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> ;
+     rdfs:label "SET" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#START
+:START rdf:type owl:NamedIndividual ,
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ;
+       rdfs:label "START" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#STATE
+:STATE rdf:type owl:NamedIndividual ,
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+       rdfs:label "STATE" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIME
+:TIME rdf:type owl:NamedIndividual ,
+               <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> ;
+      rdfs:label "TIME" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMES
+:TIMES rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2006/time#TimeUnit> ;
+       rdfs:label "TIMES" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TimeML
+:TimeML rdf:type owl:NamedIndividual ,
+                 <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> ;
+        rdfs:label "TimeML" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#circumstances
+:circumstances rdf:type owl:NamedIndividual ,
+                        <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> ;
+               rdfs:label "circumstances" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#false
+:false rdf:type owl:NamedIndividual ,
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction> ;
+       rdfs:label "false" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#procedure
+:procedure rdf:type owl:NamedIndividual ,
+                    <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> ;
+           rdfs:label "procedure" .
+
+
+###  https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#true
+:true rdf:type owl:NamedIndividual ,
+               <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction> ;
+      rdfs:label "true" .
+
+
+[ rdf1:type owl:Class
+] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+[ rdf1:type owl:Class
+ ] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+[ rdf1:type owl:Class
+ ] .
+
+[ rdf1:type owl:Restriction
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ACE2005> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ADJECTIVE> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos> ;
+                                                                        rdfs:label "ADJECTIVE" ;
+                                                                        rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AFTER> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#APPROX> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ASPECTUAL> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#BEFORE> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod> ,
+                                                                               owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#CREATION_TIME> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument> ,
+                                                                                      owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DATE> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type> ,
+                                                                             owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DURATION> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#END> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_LESS> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_MORE> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EXPIRATION_TIME> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatter> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#FUTURE> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#INFINITIVE> rdf1:type owl:NamedIndividual ,
+                                                                                   <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_ACTION> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_STATE> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#LESS_THAN> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MID> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MODIFICATION_TIME> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MORE_THAN> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#NEG> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity> ,
+                                                                            owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#NONE> rdf1:type owl:NamedIndividual ;
+                                                                   rdfs:label "NONE" .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#NOUN> rdf1:type owl:NamedIndividual ,
+                                                                             <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos> ;
+                                                                   rdfs:label "NOUN" .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#OCCURRENCE> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_AFTER> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_BEFORE> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PAST> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PASTPART> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> ,
+                                                                                 owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PERCEPTION> rdfs:label "PERCEPTION" ;
+                                                                         rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PERFECTIVE> rdf1:type owl:NamedIndividual ;
+                                                                         rdfs:label "PERFECTIVE" ;
+                                                                         rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect> .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PERFECTIVE_PROGRESSIVE> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect> ,
+                                                                                               owl:NamedIndividual ;
+                                                                                     rdfs:label "PERFECTIVE_PROGRESSIVE" .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#POS> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PREPOSITION> rdf1:type owl:NamedIndividual ;
+                                                                          rdfs:label "PREPOSITION" .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PRESENT> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PRESPART> rdf1:type owl:NamedIndividual ,
+                                                                                 <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense> .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PROGRESSIVE> rdf1:type owl:NamedIndividual ;
+                                                                          rdfs:label "PROGRESSIVE" ;
+                                                                          rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect> .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PUBLICATION_TIME> rdfs:label "PUBLICATION_TIME" ;
+                                                                               rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RECEPTION_TIME> rdfs:label "RECEPTION_TIME" ;
+                                                                             rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RELEASE_TIME> rdfs:label "RELEASE_TIME" ;
+                                                                           rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#REPORTING> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass> ;
+                                                                        rdfs:label "REPORTING" ;
+                                                                        rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SET> rdf1:type owl:NamedIndividual ;
+                                                                  rdfs:label "SET" .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#START> rdfs:label "START" ;
+                                                                    rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#STATE> rdfs:label "STATE" ;
+                                                                    rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIME> rdfs:label "TIME" ;
+                                                                   rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TimeML> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema> ;
+                                                                     rdfs:label "TimeML" ;
+                                                                     rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#VERB> rdfs:label "VERB" ;
+                                                                   rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#circumstance> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#false> rdf1:type owl:NamedIndividual .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#procedure> rdf1:type owl:NamedIndividual ,
+                                                                                  <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type> .
+
+
+<http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#true> rdf1:type <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction> ,
+                                                                             owl:NamedIndividual .
+
+
+rdf1: rdf1:type owl:Ontology ;
+      dc:description "Ontology code created by Chowlk" ;
+      dc:creator "María Navas-Loro" ;
+      dc:license "http" ;
+      owl:versionInfo "0.0.1" ;
+      dc:title "FromTimeToTime Ontology" .
+
+
+<http://www.w3.org/2005/11/its/rdf#taIdentRef> rdfs:label "taidentref" ;
+                                               rdf1:type owl:ObjectProperty .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTstem>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEcardinality>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEmodality>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_what>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_when>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_who>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3freq>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3quant>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type>
+                <http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,6 @@
+SELECT DISTINCT ?doc
+WHERE {
+  	?doc a ft3:Document .
+  	
+}
+LIMIT 10

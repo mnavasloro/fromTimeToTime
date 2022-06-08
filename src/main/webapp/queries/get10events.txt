@@ -1,0 +1,8 @@
+SELECT DISTINCT ?doc ?event ?id
+WHERE {
+  	?doc a ft3:Document .
+  	?doc ft3:hasEvent [ ?event [
+  	ft3:hasID ?id ]].
+  	
+}
+LIMIT 10

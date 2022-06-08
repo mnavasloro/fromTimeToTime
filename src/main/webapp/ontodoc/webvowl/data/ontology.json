@@ -1,0 +1,4323 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://groundedannotationframework.org/files/2014/01", "https://sbmi.uth.edu/ontology/TEO.owl", "http://semanticweb.cs.vu.nl/2009/11/sem/", "http://www.w3.org/2001/XMLSchema", "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core", "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime", "http://www.w3.org/2000/01/rdf-schema", "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime", "http://www.w3.org/2006/time", "http://www.owl-ontologies.com/rdf", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "undefined" : "fromTimeToTime"
+    },
+    "iri" : "https://fromtimetotime.linkeddata.es/ontology",
+    "version" : "1.0",
+    "author" : [ "María Navas-Loro" ],
+    "description" : {
+      "undefined" : "Ontology to support temporal information annotation"
+    },
+    "labels" : {
+      "undefined" : "ft3"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/cc-by/3.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "María Navas-Loro",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "ft3",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://fromtimetotime.linkeddata.es/ontology",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Ontology to support temporal information annotation.",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "fromTimeToTime",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "178",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "201",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "220",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "25",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "95",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "146",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "174",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2006/time#TimeUnit",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TimeUnit",
+      "undefined" : "TimeUnit"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMES",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "TIMES",
+        "undefined" : "TIMES"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Describes the granularity of the repretition in a repetitive temporal expression."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Argument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Argument",
+      "undefined" : "Argument"
+    },
+    "subClasses" : [ "21", "19", "22", "23" ],
+    "comment" : {
+      "en" : "Abstract class to represent the arguments of the different  annotation standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEargument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEargument",
+      "undefined" : "MAKEINSTANCEargument"
+    },
+    "subClasses" : [ "27", "28", "29", "30", "31", "32", "33", "34" ],
+    "comment" : {
+      "en" : "Abstract class of the arguments of the MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://semanticweb.cs.vu.nl/2009/11/sem/#Time",
+    "baseIri" : "http://semanticweb.cs.vu.nl/2009/11/sem/",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Time",
+      "undefined" : "Time"
+    },
+    "subClasses" : [ "45", "46", "47" ],
+    "comment" : {
+      "undefined" : "This class represents the information of any temporal expression."
+    },
+    "attributes" : [ "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalRelation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalRelation",
+      "undefined" : "TemporalRelation"
+    },
+    "comment" : {
+      "undefined" : "A possible restriction to a sem:Time expression is a temporal relation, such as \"before\""
+    },
+    "attributes" : [ "external" ],
+    "id" : "36",
+    "superClasses" : [ "37" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTclass",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EVENTclass",
+      "undefined" : "EVENTclass"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ASPECTUAL",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "ASPECTUAL",
+        "undefined" : "ASPECTUAL"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PERCEPTION",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "PERCEPTION",
+        "undefined" : "PERCEPTION"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_STATE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "I_STATE",
+        "undefined" : "I_STATE"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#OCCURRENCE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "OCCURRENCE",
+        "undefined" : "OCCURRENCE"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#REPORTING",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "REPORTING",
+        "undefined" : "REPORTING"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#I_ACTION",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "I_ACTION",
+        "undefined" : "I_ACTION"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#STATE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "STATE",
+        "undefined" : "STATE"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument CLASS of a EVENT annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3mod",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3mod",
+      "undefined" : "TIMEX3mod"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_BEFORE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "ON_OR_BEFORE",
+        "undefined" : "ON_OR_BEFORE"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#LESS_THAN",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "LESS_THAN",
+        "undefined" : "LESS_THAN"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ON_OR_AFTER",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "ON_OR_AFTER",
+        "undefined" : "ON_OR_AFTER"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AFTER",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "AFTER",
+        "undefined" : "AFTER"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MID",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "MID",
+        "undefined" : "MID"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#APPROX",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "APPROX",
+        "undefined" : "APPROX"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_MORE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "EQUAL_OR_MORE",
+        "undefined" : "EQUAL_OR_MORE"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#START",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "START",
+        "undefined" : "START"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MORE_THAN",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "MORE_THAN",
+        "undefined" : "MORE_THAN"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#BEFORE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "BEFORE",
+        "undefined" : "BEFORE"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#END",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "END",
+        "undefined" : "END"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EQUAL_OR_LESS",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "EQUAL_OR_LESS",
+        "undefined" : "EQUAL_OR_LESS"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument MOD of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3type",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3type",
+      "undefined" : "TIMEX3type"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SET",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "SET",
+        "undefined" : "SET"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "TIME",
+        "undefined" : "TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DURATION",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "DURATION",
+        "undefined" : "DURATION"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#DATE",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "DATE",
+        "undefined" : "DATE"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument TYPE of a TIMEX3 annotation from the TimeML annotation standard. It can be ft3:DATE, ft3:SET, ft3:DURATION or ft3:TIME."
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "75", "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Restriction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Restriction",
+      "undefined" : "Restriction"
+    },
+    "subClasses" : [ "36" ],
+    "comment" : {
+      "undefined" : "Any possible restriction to a sem:Time class."
+    },
+    "attributes" : [ "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#GeneralDurationDescription",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeneralDurationDescription",
+      "undefined" : "GeneralDurationDescription"
+    },
+    "comment" : {
+      "undefined" : "Represents a duration temporal expression (e.g. Two days). In the TimeML standard it would correspond to a DURATION temporal expression."
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "https://sbmi.uth.edu/ontology/TEO.owl#PeriodicTimeInterval",
+    "baseIri" : "https://sbmi.uth.edu/ontology/TEO.owl",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PeriodicTimeInterval",
+      "undefined" : "PeriodicTimeInterval"
+    },
+    "comment" : {
+      "undefined" : "Periodic Time Interval is a possible way to represent a periodic event in the TEO ontology."
+    },
+    "attributes" : [ "external" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterAnnotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventsMatterAnnotation",
+      "undefined" : "EventsMatterAnnotation"
+    },
+    "subClasses" : [ "42", "1", "4", "6" ],
+    "comment" : {
+      "undefined" : "Annotation from the EventsMatter corpus format. It allows to represent events through annotations of different types (when, what, who, event) sharing an id."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3TemporalFunctionID",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3TemporalFunctionID",
+      "undefined" : "TIMEX3TemporalFunctionID"
+    },
+    "comment" : {
+      "en" : "Argument TIMEX3TemporalFunctionID of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTstem",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EVENTstem",
+      "undefined" : "EVENTstem"
+    },
+    "comment" : {
+      "en" : "Argument STEM of a EVENT annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "85",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEmodality",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEmodality",
+      "undefined" : "MAKEINSTANCEmodality"
+    },
+    "comment" : {
+      "en" : "Argument MODALITY of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventsMatterEvent",
+      "undefined" : "EventsMatterEvent"
+    },
+    "comment" : {
+      "undefined" : "Annotation from the EventsMatter corpus format. It allows to represent the context of an event."
+    },
+    "attributes" : [ "external" ],
+    "id" : "42",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventFormalization",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventFormalization",
+      "undefined" : "EventFormalization"
+    },
+    "comment" : {
+      "undefined" : "A formal representation of an event, such as a frame from Framenet, VerbNet or another semantic repository."
+    },
+    "attributes" : [ "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3temporalFunction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3temporalFunction",
+      "undefined" : "TIMEX3temporalFunction"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#true",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "true",
+        "undefined" : "true"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#false",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "false",
+        "undefined" : "false"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument temporalFunction of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "102",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTeid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EVENTeid",
+      "undefined" : "EVENTeid"
+    },
+    "comment" : {
+      "en" : "Argument EID of a EVENT annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "21", "82", "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3freq",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3freq",
+      "undefined" : "TIMEX3freq"
+    },
+    "comment" : {
+      "en" : "Argument FREQ of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEcardinality",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEcardinality",
+      "undefined" : "MAKEINSTANCEcardinality"
+    },
+    "comment" : {
+      "en" : "Argument CARDINALITY of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEaspect",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEaspect",
+      "undefined" : "MAKEINSTANCEaspect"
+    },
+    "comment" : {
+      "en" : "Argument ASPECT of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "28",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_what",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventsMatterEvent_what",
+      "undefined" : "EventsMatterEvent_what"
+    },
+    "comment" : {
+      "undefined" : "Annotation from the EventsMatter corpus format. It allows to represent the core of an event, meaning what happened."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Document",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Document",
+      "undefined" : "Document"
+    },
+    "comment" : {
+      "undefined" : "Class to represent an annotated document."
+    },
+    "attributes" : [ "external" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://semanticweb.cs.vu.nl/2009/11/sem/#Event",
+    "baseIri" : "http://semanticweb.cs.vu.nl/2009/11/sem/",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "comment" : {
+      "undefined" : "Represents an event, in the broadest sense of the term."
+    },
+    "attributes" : [ "external" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3quant",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3quant",
+      "undefined" : "TIMEX3quant"
+    },
+    "comment" : {
+      "en" : "Argument QUANT of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "87",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_who",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventsMatterEvent_who",
+      "undefined" : "EventsMatterEvent_who"
+    },
+    "comment" : {
+      "undefined" : "Annotation from the EventsMatter corpus format. It allows to represent the who carried out the event."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3tid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3tid",
+      "undefined" : "TIMEX3tid"
+    },
+    "subClasses" : [ "8", "11", "13", "16" ],
+    "comment" : {
+      "en" : "Argument TID of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "19", "82" ]
+  }, {
+    "iri" : "https://sbmi.uth.edu/ontology/TEO.owl#TemporalInterval",
+    "baseIri" : "https://sbmi.uth.edu/ontology/TEO.owl",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalInterval",
+      "undefined" : "TemporalInterval"
+    },
+    "comment" : {
+      "undefined" : "Represents an interval from the TEO ontology."
+    },
+    "attributes" : [ "external" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventMention",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventMention",
+      "undefined" : "EventMention"
+    },
+    "comment" : {
+      "undefined" : "The textual mention of an event."
+    },
+    "attributes" : [ "external" ],
+    "id" : "139"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Interval",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Interval",
+      "undefined" : "Interval"
+    },
+    "comment" : {
+      "undefined" : "Interval representation from the TimeOntology."
+    },
+    "attributes" : [ "external" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3functionInDocument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3functionInDocument",
+      "undefined" : "TIMEX3functionInDocument"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#CREATION_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "CREATION_TIME",
+        "undefined" : "CREATION_TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MODIFICATION_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "MODIFICATION_TIME",
+        "undefined" : "MODIFICATION_TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RELEASE_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "RELEASE_TIME",
+        "undefined" : "RELEASE_TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PUBLICATION_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "PUBLICATION_TIME",
+        "undefined" : "PUBLICATION_TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EXPIRATION_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "EXPIRATION_TIME",
+        "undefined" : "EXPIRATION_TIME"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RECEPTION_TIME",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "RECEPTION_TIME",
+        "undefined" : "RECEPTION_TIME"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument functionInDocument of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "133",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3endPoint",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3endPoint",
+      "undefined" : "TIMEX3endPoint"
+    },
+    "comment" : {
+      "en" : "Argument TIMEX3endPoint of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3argument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "description" : {
+      "en" : "Abstract class of the arguments of the TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3argument",
+      "undefined" : "TIMEX3argument"
+    },
+    "subClasses" : [ "18", "70", "104", "74", "87", "9", "102", "133" ],
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTargument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EVENTargument",
+      "undefined" : "EVENTargument"
+    },
+    "subClasses" : [ "62", "85", "32" ],
+    "comment" : {
+      "en" : "Abstract class of the arguments of the EVENT annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventSchematization",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventSchematization",
+      "undefined" : "EventSchematization"
+    },
+    "comment" : {
+      "undefined" : "The schematic representation of an event."
+    },
+    "attributes" : [ "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEeiid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEeiid",
+      "undefined" : "MAKEINSTANCEeiid"
+    },
+    "comment" : {
+      "en" : "Argument EIID of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "82", "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3value",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3value",
+      "undefined" : "TIMEX3value"
+    },
+    "comment" : {
+      "en" : "Argument VALUE of a TIMEX3 annotation from the TimeML annotation standard. It can take different formats depending on the TYPE of annotation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "104",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#annotationUnit",
+    "equivalent" : [ "39" ],
+    "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "annotationUnit",
+      "undefined" : "annotationUnit"
+    },
+    "comment" : {
+      "undefined" : "Represenents an annotation of any kind, usually NLP."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatterEvent_when",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventsMatterEvent_when",
+      "undefined" : "EventsMatterEvent_when"
+    },
+    "comment" : {
+      "undefined" : "Annotation from the EventsMatter corpus format. It allows to represent the when an event happened."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation",
+    "equivalent" : [ "178" ],
+    "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Annotation",
+      "undefined" : "Annotation"
+    },
+    "subClasses" : [ "77", "69", "97", "72", "2" ],
+    "comment" : {
+      "undefined" : "Represenents an annotation of any kind, usually NLP."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEtense",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEtense",
+      "undefined" : "MAKEINSTANCEtense"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#PAST",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "PAST",
+        "undefined" : "PAST"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument TENSE of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALsid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIGNALsid",
+      "undefined" : "SIGNALsid"
+    },
+    "comment" : {
+      "en" : "Argument SID of a SIGNAL annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "82", "22" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ID",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ID",
+      "undefined" : "ID"
+    },
+    "subClasses" : [ "73", "9", "32", "33" ],
+    "comment" : {
+      "undefined" : "Identifier of an annotation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventInstance",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EventInstance",
+      "undefined" : "EventInstance"
+    },
+    "comment" : {
+      "undefined" : "An instance of an event. In the example \"he went jogging on Tuesday and Wednesday\", there would be one mention but two instances: one on Tuesday and another one on Wednesday."
+    },
+    "attributes" : [ "external" ],
+    "id" : "201"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Type",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Type",
+      "undefined" : "Type"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#circumstances",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "circumstances",
+        "undefined" : "circumstances"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#procedure",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "procedure",
+        "undefined" : "procedure"
+      }
+    } ],
+    "subClasses" : [ "74" ],
+    "comment" : {
+      "undefined" : "Represents the type of an annotation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3annotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3annotation",
+      "undefined" : "TIMEX3annotation"
+    },
+    "comment" : {
+      "undefined" : "Annotation of the type TIMEX3 from the TimeML standard. It allows to represent temporal expressions (dates, times...)"
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEannotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEannotation",
+      "undefined" : "MAKEINSTANCEannotation"
+    },
+    "comment" : {
+      "undefined" : "Annotation of the type MAKEINSTANCE  from the TimeML standard. It represents instances of events."
+    },
+    "attributes" : [ "external" ],
+    "id" : "69",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALannotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIGNALannotation",
+      "undefined" : "SIGNALannotation"
+    },
+    "comment" : {
+      "undefined" : "Annotation of the type SIGNAL from the TimeML standard. It allows to mark up words with a temporal meaning that are not relations, temporal expressions or events."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2006/time#GeneralDateTimeDescription",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeneralDateTimeDescription",
+      "undefined" : "GeneralDateTimeDescription"
+    },
+    "comment" : {
+      "undefined" : "Represents a time/date temporal expression  (e.g. Tomorrow at eight o'clock). In the TimeML standard it would correspond to a DATE or a TIME temporal expression."
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#Times",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Times",
+      "undefined" : "Times"
+    },
+    "comment" : {
+      "undefined" : "Represents the repetition times of a repetitive expression, with an amount (value) and timeunit."
+    },
+    "attributes" : [ "external" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://semanticweb.cs.vu.nl/2009/11/sem/#Actor",
+    "baseIri" : "http://semanticweb.cs.vu.nl/2009/11/sem/",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Actor",
+      "undefined" : "Actor"
+    },
+    "comment" : {
+      "undefined" : "Represents an entity involved in an Event, usually who carried out the action."
+    },
+    "attributes" : [ "external" ],
+    "id" : "220"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3beginPoint",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3beginPoint",
+      "undefined" : "TIMEX3beginPoint"
+    },
+    "comment" : {
+      "en" : "Argument TIMEX3beginPoint of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://groundedannotationframework.org/files/2014/01/gaf.rdfMention",
+    "baseIri" : "http://groundedannotationframework.org/files/2014/01",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "gaf.rdfMention",
+      "undefined" : "Mention"
+    },
+    "comment" : {
+      "undefined" : "Class Mention from GAF, representing a mention of an annotation in text."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#RepetitiveTime",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "RepetitiveTime",
+      "undefined" : "RepetitiveTime"
+    },
+    "comment" : {
+      "undefined" : "Represents a temporal expression that repeats over time (e.g. Once a week). In the TimeML standard it would correspond to a SET temporal expression."
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "40",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "14", "137" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "146",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "45", "46" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#SIGNALargument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SIGNALargument",
+      "undefined" : "SIGNALargument"
+    },
+    "subClasses" : [ "73" ],
+    "comment" : {
+      "en" : "Abstract class of the arguments of the SIGNAL annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TIMEX3valueFromFunction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TIMEX3valueFromFunction",
+      "undefined" : "TIMEX3valueFromFunction"
+    },
+    "comment" : {
+      "en" : "Argument valueFromFunction of a TIMEX3 annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "9" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "92", "52" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "174"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ComposedTemporalExpression",
+      "undefined" : "ComposedTemporalExpression"
+    },
+    "comment" : {
+      "undefined" : "This class allows to create a composed temporal expression, combining different temporal expressions with the operators OR, AND or NOT."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "92" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#AnnotationSchema",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AnnotationSchema",
+      "undefined" : "AnnotationSchema"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ACE2005",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "ACE2005",
+        "undefined" : "ACE2005"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EventsMatter",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "EventsMatter",
+        "undefined" : "EventsMatter"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TimeML",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "TimeML",
+        "undefined" : "TimeML"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Allows to represent and associate an annotation format to the different annotations in a document."
+    },
+    "attributes" : [ "external" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpos",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEpos",
+      "undefined" : "MAKEINSTANCEpos"
+    },
+    "comment" : {
+      "en" : "Argument POS of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://groundedannotationframework.org/files/2014/01/gaf.rdfInstance",
+    "baseIri" : "http://groundedannotationframework.org/files/2014/01",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "gaf.rdfInstance",
+      "undefined" : "Instance"
+    },
+    "comment" : {
+      "undefined" : "Class Instance from GAF, representing an instance of an annotation in text."
+    },
+    "attributes" : [ "external" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TemporalExpression",
+      "undefined" : "TemporalExpression"
+    },
+    "subClasses" : [ "52" ],
+    "comment" : {
+      "undefined" : "This class represents a temporal expression, meaning a expression representing any temporal reference."
+    },
+    "attributes" : [ "external" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#MAKEINSTANCEpolarity",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MAKEINSTANCEpolarity",
+      "undefined" : "MAKEINSTANCEpolarity"
+    },
+    "individuals" : [ {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#NEG",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "NEG",
+        "undefined" : "NEG"
+      }
+    }, {
+      "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#POS",
+      "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+      "labels" : {
+        "IRI-based" : "POS",
+        "undefined" : "POS"
+      }
+    } ],
+    "comment" : {
+      "en" : "Argument POLARITY of a MAKEINSTANCE annotation from the TimeML annotation standard."
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#EVENTannotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "instances" : 0,
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EVENTannotation",
+      "undefined" : "EVENTannotation"
+    },
+    "comment" : {
+      "undefined" : "Annotation of the type EVENT from the TimeML standard"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97",
+    "superClasses" : [ "39" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "135",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "138",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "140",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "143",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "149",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "150",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "151",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "152",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "153",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "154",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "155",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "156",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "157",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "158",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "162",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "163",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "164",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "165",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "166",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "167",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "168",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "169",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "170",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "171",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "172",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "173",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "175",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "176",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "179",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "184",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "186",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "187",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "189",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "190",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "191",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "193",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "194",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "195",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "196",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "197",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "198",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "199",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "200",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "202",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "203",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "204",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "205",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "206",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "207",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "208",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "210",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "211",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "212",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "213",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "214",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "215",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "216",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "217",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "218",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "219",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "221",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "222",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "223",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "224",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "225",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "226",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "227",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "228",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "229",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "231",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "232",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "233",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "234",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "235",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "236",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "237",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "238",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "239",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "240",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "241",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "242",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "243",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "244",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "245",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "246",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "247",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "248",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "249",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "250",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "181",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "252",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "253",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "254",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "255",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "256",
+    "type" : "owl:disjointWith"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "9",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "range" : "9",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "25",
+    "subproperty" : [ "26" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
+  }, {
+    "range" : "37",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#alternativeValue",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "40",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "alternativeValue",
+      "undefined" : "alternativeValue"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "An alternative way to represent the information provided by an Annotation; for instance, a sem:Time would be an alternative value for a  TIMEX3 annotation."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "38"
+  }, {
+    "range" : "2",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "23",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "23",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "23",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "23",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#and",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "52",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "and",
+      "undefined" : "and"
+    },
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "AND relation to combine [TemporalExpressions](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression). in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)."
+    },
+    "attributes" : [ "object", "external", "symmetric" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEvent",
+    "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasEvent",
+      "undefined" : "hasEvent"
+    },
+    "superproperty" : [ "24" ],
+    "domain" : "53",
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
+  }, {
+    "range" : "23",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "23",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "44",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "44",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "44",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#related",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "61",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related",
+      "undefined" : "related"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#or",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "52",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "or",
+      "undefined" : "or"
+    },
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "OR relation to combine [TemporalExpressions](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression) in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "63"
+  }, {
+    "range" : "20",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "20",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
+  }, {
+    "range" : "23",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "23",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPolarity",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "29",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPolarity",
+      "undefined" : "haspolarity"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasId",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "73",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasId",
+      "undefined" : "hasid"
+    },
+    "domain" : "72",
+    "attributes" : [ "object", "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasBeginPoint",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "11",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasBeginPoint",
+      "undefined" : "hasbeginpoint"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#instanceOf",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "25",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "instanceOf",
+      "undefined" : "instanceOf"
+    },
+    "domain" : "25",
+    "attributes" : [ "object", "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasID",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "82",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasID",
+      "undefined" : "hasID"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://groundedannotationframework.org/files/2014/01/gaf.rdfdenotes",
+    "baseIri" : "http://groundedannotationframework.org/files/2014/01",
+    "range" : "84",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "gaf.rdfdenotes",
+      "undefined" : "denotes"
+    },
+    "domain" : "61",
+    "attributes" : [ "object", "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasQuant",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "87",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasQuant",
+      "undefined" : "hasquant"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasCardinality",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "30",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasCardinality",
+      "undefined" : "hascardinality"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#validPeriod",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "90",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "validPeriod",
+      "undefined" : "validPeriod"
+    },
+    "domain" : "44",
+    "attributes" : [ "object", "external" ],
+    "id" : "89"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#representationOf",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "44",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "representationOf",
+      "undefined" : "representationOf"
+    },
+    "domain" : "92",
+    "attributes" : [ "object", "external" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTimeUnit",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "95",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTimeUnit",
+      "undefined" : "hasTimeUnit"
+    },
+    "domain" : "94",
+    "attributes" : [ "object", "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "32",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEid",
+      "undefined" : "haseid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "97",
+    "attributes" : [ "object", "external" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://semanticweb.cs.vu.nl/2009/11/sem/#eventType",
+    "baseIri" : "http://semanticweb.cs.vu.nl/2009/11/sem/",
+    "range" : "100",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "eventType",
+      "undefined" : "eventType"
+    },
+    "domain" : "99",
+    "attributes" : [ "object", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEventId",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "32",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEventId",
+      "undefined" : "haseventid"
+    },
+    "domain" : "23",
+    "attributes" : [ "object", "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValue",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "104",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasValue",
+      "undefined" : "hasvalue"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionFrequency",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "106",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "repetitionFrequency",
+      "undefined" : "repetitionFrequency"
+    },
+    "domain" : "47",
+    "attributes" : [ "object", "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#repetitionTimes",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "94",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "repetitionTimes",
+      "undefined" : "repetitionTimes"
+    },
+    "domain" : "47",
+    "attributes" : [ "object", "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#annotationOf",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "40",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "annotationOf",
+      "undefined" : "annotationOf"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "The information represented by an annotation."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "108"
+  }, {
+    "range" : "22",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#followsSchema",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "111",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "followsSchema",
+      "undefined" : "followsSchema"
+    },
+    "domain" : "39",
+    "comment" : {
+      "undefined" : "Connects an Annotation with the AnnotationSchema it implements."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasPos",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "34",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPos",
+      "undefined" : "haspos"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "112"
+  }, {
+    "range" : "92",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTense",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "27",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTense",
+      "undefined" : "hasTense"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "114"
+  }, {
+    "range" : "39",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
+  }, {
+    "range" : "82",
+    "domain" : "73",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
+  }, {
+    "range" : "82",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
+  }, {
+    "range" : "82",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#argumentOf",
+    "baseIri" : "https://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "39",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "argumentOf",
+      "undefined" : "argumentOf"
+    },
+    "domain" : "20",
+    "attributes" : [ "object", "external" ],
+    "id" : "119"
+  }, {
+    "range" : "82",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "120"
+  }, {
+    "range" : "75",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasType",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "75",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasType",
+      "undefined" : "hastype"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "122"
+  }, {
+    "range" : "39",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "39",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "39",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "range" : "39",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "19",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "127"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "9",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTid",
+      "undefined" : "hastid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "128"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAspect",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "28",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAspect",
+      "undefined" : "hasaspect"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "129"
+  }, {
+    "range" : "19",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "19",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "19",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "21",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "21",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "135"
+  }, {
+    "range" : "21",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValueFromFunction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "13",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasValueFromFunction",
+      "undefined" : "hasvaluefromfunction"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "138"
+  }, {
+    "range" : "19",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "19",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "141"
+  }, {
+    "range" : "19",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
+  }, {
+    "range" : "29",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "143"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFreq",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "18",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFreq",
+      "undefined" : "hasfreq"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://www.owl-ontologies.com/rdf#value",
+    "baseIri" : "http://www.owl-ontologies.com/rdf",
+    "range" : "146",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#DatatypeProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "value",
+      "undefined" : "value"
+    },
+    "domain" : "104",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "145"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSignalId",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "73",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSignalId",
+      "undefined" : "hassignalid"
+    },
+    "domain" : "23",
+    "attributes" : [ "object", "external" ],
+    "id" : "147"
+  }, {
+    "range" : "31",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "range" : "33",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "149"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "range" : "31",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "151"
+  }, {
+    "range" : "27",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "152"
+  }, {
+    "range" : "34",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "range" : "27",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "154"
+  }, {
+    "range" : "34",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "range" : "33",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "156"
+  }, {
+    "range" : "30",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#not",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "52",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "not",
+      "undefined" : "not"
+    },
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "NOT relation to negate a [TemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#TemporalExpression) in a [ComposedTemporalExpression](http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#ComposedTemporalExpression)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunctionID",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "8",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTemporalFunctionID",
+      "undefined" : "hastemporalfunctionID"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "159"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasSid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "73",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSid",
+      "undefined" : "hassid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "72",
+    "attributes" : [ "object", "external" ],
+    "id" : "160"
+  }, {
+    "range" : "31",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "29",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "85",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "range" : "85",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "165"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "166"
+  }, {
+    "range" : "28",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "77",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "168"
+  }, {
+    "range" : "32",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "169"
+  }, {
+    "range" : "77",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "9",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTid",
+      "undefined" : "hastid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "171"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasValue",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "104",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasValue",
+      "undefined" : "hasvalue"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "172"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#composedOf",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "174",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "composedOf",
+      "undefined" : "composedOf"
+    },
+    "domain" : "52",
+    "attributes" : [ "object", "external" ],
+    "id" : "173"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasType",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "74",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasType",
+      "undefined" : "hastype"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "175"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "25",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "closeMatch",
+      "undefined" : "closematch"
+    },
+    "domain" : "25",
+    "attributes" : [ "object", "external", "symmetric" ],
+    "id" : "176"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasStem",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "85",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStem",
+      "undefined" : "hasstem"
+    },
+    "domain" : "97",
+    "attributes" : [ "object", "external" ],
+    "id" : "177"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasMod",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "70",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasMod",
+      "undefined" : "hasmod"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "179"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasArgument",
+    "inverse" : "119",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "20",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasArgument",
+      "undefined" : "hasArgument"
+    },
+    "domain" : "39",
+    "subproperty" : [ "159", "128", "144", "180", "160", "181", "86", "103", "182", "76", "96", "179", "138", "122", "183", "81" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "78"
+  }, {
+    "range" : "4",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "184"
+  }, {
+    "range" : "6",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEiid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "33",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEiid",
+      "undefined" : "haseiid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "69",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "186"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "187"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEiid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "33",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEiid",
+      "undefined" : "haseiid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "183"
+  }, {
+    "range" : "1",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "188"
+  }, {
+    "range" : "27",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "189"
+  }, {
+    "range" : "4",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "190"
+  }, {
+    "range" : "6",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "191"
+  }, {
+    "range" : "27",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "192"
+  }, {
+    "range" : "34",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "193"
+  }, {
+    "range" : "27",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "194"
+  }, {
+    "range" : "27",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "195"
+  }, {
+    "range" : "34",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "196"
+  }, {
+    "range" : "34",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "197"
+  }, {
+    "range" : "29",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "198"
+  }, {
+    "range" : "27",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "199"
+  }, {
+    "range" : "34",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "200"
+  }, {
+    "range" : "29",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "202"
+  }, {
+    "range" : "31",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "203"
+  }, {
+    "range" : "74",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "204"
+  }, {
+    "range" : "9",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "205"
+  }, {
+    "range" : "87",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "range" : "104",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
+    "range" : "102",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "208"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasClass",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "62",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasClass",
+      "undefined" : "hasclass"
+    },
+    "domain" : "97",
+    "attributes" : [ "object", "external" ],
+    "id" : "209"
+  }, {
+    "range" : "87",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "210"
+  }, {
+    "range" : "70",
+    "domain" : "133",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "211"
+  }, {
+    "range" : "9",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "212"
+  }, {
+    "range" : "102",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "213"
+  }, {
+    "range" : "104",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "214"
+  }, {
+    "range" : "74",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "215"
+  }, {
+    "range" : "133",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "216"
+  }, {
+    "range" : "104",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "217"
+  }, {
+    "range" : "87",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "218"
+  }, {
+    "range" : "70",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasAnnotation",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "39",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasAnnotation",
+      "undefined" : "hasAnnotation"
+    },
+    "domain" : "53",
+    "attributes" : [ "object", "external" ],
+    "id" : "221"
+  }, {
+    "range" : "9",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "222"
+  }, {
+    "range" : "102",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "223"
+  }, {
+    "range" : "74",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "224"
+  }, {
+    "range" : "133",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "225"
+  }, {
+    "range" : "18",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "226"
+  }, {
+    "range" : "87",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "227"
+  }, {
+    "range" : "70",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "228"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "229"
+  }, {
+    "range" : "20",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasFunctionInDocument",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "133",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFunctionInDocument",
+      "undefined" : "hasfunctionindocument"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "180"
+  }, {
+    "range" : "2",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "69",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "72",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "77",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "69",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasModality",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "31",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasModality",
+      "undefined" : "hasmodality"
+    },
+    "domain" : "69",
+    "attributes" : [ "object", "external" ],
+    "id" : "236"
+  }, {
+    "range" : "72",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "77",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "range" : "72",
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "239"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEid",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "32",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEid",
+      "undefined" : "haseid"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "97",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "240"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasClass",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "62",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasClass",
+      "undefined" : "hasclass"
+    },
+    "domain" : "97",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "241"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasRestriction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "37",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasRestriction",
+      "undefined" : "hasrestriction"
+    },
+    "domain" : "90",
+    "attributes" : [ "object", "external" ],
+    "id" : "242"
+  }, {
+    "range" : "104",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "243"
+  }, {
+    "range" : "74",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "244"
+  }, {
+    "range" : "104",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "range" : "9",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "104",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "range" : "104",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "74",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "74",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasEndPoint",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "16",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEndPoint",
+      "undefined" : "hasendpoint"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "181"
+  }, {
+    "range" : "9",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  }, {
+    "iri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime#hasTemporalFunction",
+    "baseIri" : "http://fromtimetotime.linkeddata.es/ontology/fromtimetotime",
+    "range" : "102",
+    "annotations" : {
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTemporalFunction",
+      "undefined" : "hastemporalfunction"
+    },
+    "superproperty" : [ "78" ],
+    "domain" : "77",
+    "attributes" : [ "object", "external" ],
+    "id" : "182"
+  }, {
+    "range" : "102",
+    "domain" : "87",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "range" : "9",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "102",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "254"
+  }, {
+    "range" : "104",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "255"
+  }, {
+    "range" : "74",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "256"
+  } ]
+}

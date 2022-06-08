@@ -1,0 +1,9 @@
+SELECT DISTINCT ?doc ?event ?type ?id
+WHERE {
+  	?doc ft3:hasEvent [ ?event [
+  	sem:EventType ?type ]] .
+	?doc ft3:hasEvent [ ?event [
+  	ft3:hasID ?id ]] .
+  FILTER ((STR(?type)) = "write")
+}
+LIMIT 10

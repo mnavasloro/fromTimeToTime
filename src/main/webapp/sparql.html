@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/conv.png">
+        <!-- Author Meta -->
+        <meta name="author" content="María Navas-Loro">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Site Title -->
+        <title>FT3:</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/4.0.6/sweetalert2.min.css'>
+		<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+
+    </head>
+    <body  onload="load()">
+        <!-- PureCookie -->
+  <link rel="stylesheet" type="text/css" href="css/purecookie.css" async />
+  <script src="js/purecookie.js" async></script>
+  <!--            -->
+        <div class="main-wrapper-first"><div class="container"><div class="header-wrap">
+                    <div class="header-top d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                        </div>
+                        <div class="main-menubar d-flex align-items-center">
+                            <nav>
+									<a href="index.html" style="text-decoration: none;outline: 0;color: white;">Home</a>
+									<a href="ontology.html" style="text-decoration: none;outline: 0;color: white;">Ontology</a>
+									<a href="service.html" style="text-decoration: none;outline: 0;color: white;">Converter</a>
+									<a href="sparql.html" style="text-decoration: none;outline: 0;color: white;">QUERY</a>
+
+								</nav>
+                            <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="working-process-area" style="padding: 100px 0px 50px 0px;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="section-title text-center" style="padding-bottom:0px;">
+                                <!--h2>Welcome to</h2-->
+<h1 style="font-family: Garamond; font-weight: bold; font-size: 480%;text-align: center; ">   Query the Knowledge Graph</h1>
+							
+                                <h4>The event-based knowledge graph of legal decisions</h4>		
+                                <br />
+                            </div>
+							
+							
+                                
+								
+								<div style="margin: auto;">
+									<div class="col-sm-2 ladda-label icon_h" style="margin: 10px;font-size: 14px;flex: 1 1 15%; vertical-align:middle; position:none; padding-right:0px; padding-left:0px;"></div>
+                                        
+                                </div>
+								
+							
+                        <div class="row no-gutters">
+						
+                            <div class="col-lg-12 col-md-6 col-sm-6">
+							
+							 <script>
+							 function samplejson()
+{
+var v = document.getElementById("selectquery");
+var archivo = v.options[v.selectedIndex].text;
+console.log(archivo);
+var client = new XMLHttpRequest();
+client.open('GET', 'queries/' + archivo);
+client.onreadystatechange = function () {
+//                                        alert(client.responseText);
+    document.getElementById('inputText').value = client.responseText;
+}
+client.send();
+}
+							 </script>
+							
+                                <div class="mt-10"  style=" text-align: right;margin-right:5%;">
+								
+								<label for="inp" class="h4" style="text-align:left;float:left;padding: 0 20px; margin-left: 4%; margin-bottom: 2%; padding: 0.6rem;">Load a predefined question:&nbsp;&nbsp; </label>
+                            <select id="selectquery" onchange="samplejson()">
+                                <option value="get10docs.txt" selected="">Return 10 documents from the graph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+								<option value="get10events.txt">Get 10 events from the graph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+								<option value="get10events1doc.txt">Get 10 events of one specific document from the graph&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option value="get10docsin2012.txt">Get 10 events that happened in 2012&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option value="get10eventswrite.txt">Get 10 events of the type ''write''&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            </select>
+								
+								
+                                    <textarea class="single-textarea" name="inputText" id="inputText"  style="height:300px;margin-top:3%;" placeholder="Here goes the input text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Here goes the input text'" required>SELECT DISTINCT ?doc
+WHERE {
+  	?doc a ft3:Document .
+  	
+}
+LIMIT 10</textarea>
+									<div class="button-group-area mt-10">
+									<button class="genric-btn info-border radius"  onclick="start()">Query</button>
+                                </div>
+                                </div>
+								
+
+                            </div>
+                        
+                    </div>
+					
+					<!--div id="embedding-div" style="display:none;"-->
+					<div id="embedding-div" style="display:none;" class="col-lg-12 section-title text-center">
+					<div class="col-lg-12">
+                            <div class="section-title text-center" style="padding-bottom:0px; background:transparent;">
+                                
+                            							
+                                <h1>Result</h1  style="text-align: center; margin-top: 7px;margin-bottom: 20px;">	
+                            
+                                <div id="embedding" style="text-align: left; background: white; display: inline-block;    min-height: 18em;margin-bottom:20px;width:inherit;width: 100%;"></div>
+								
+								
+								
+                                <!--div id="embedding-live-example"  style="display:none;"></div-->
+</div>
+                            </div>
+                    </div>
+
+
+
+
+<script>
+function load() {
+var el = document.getElementById("p2");
+el.addEventListener("change", mensaje2, false);
+}
+</script>
+
+<script>
+async function readText(event) {
+  const file = event.target.files.item(0)
+  const text = await file.text();
+  
+  document.getElementById("inputText").value = text;
+}
+
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/4.0.6/sweetalert2.min.js'></script>
+
+<script>
+function copyToClipboard(element) {
+var copyText = document.querySelector(element);
+  copyText.select();
+  document.execCommand("copy");
+}
+
+function downloadasTextFile() {
+var filename = "ft3output.xml";
+if(outpf=="ft3" || outpf=="ft3+time" || outpf=="ft3+events"){
+	filename = "ft3output.ttl";
+}
+
+var text = respondido;
+
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+
+function mensaje() {
+  swal({
+    title: 'Done!',
+    text: 'Content copied to clipboad',
+    type: 'success',
+    timer: 2000,
+  });
+}
+
+function mensaje2() {
+  swal({
+    text: "Please don't use the same format for input and output!",
+    type: 'error',
+    timer: 2000,
+  });
+}
+
+</script>
+                    <script>
+					
+					
+					function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+                        var xhttp;
+                        var textrec;
+						var outpf;
+						var respondido;
+                        function start() {
+                            try
+                            {
+                                xhttp = new XMLHttpRequest();
+
+                                xhttp.onreadystatechange = function () {
+                                    if (this.readyState == 4 && this.status == 200) {
+											var resp = xhttp.responseText;
+											var ol = onSuccess(resp);
+											document.getElementById("embedding-div").style.display = "inline-block";
+											
+										
+                                    } else if (this.readyState == 4 && this.status == 201) {
+                                    }
+                                };
+
+								var intex = document.getElementById('inputText').value;
+								
+								                               
+								intex = "PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/#> \n" +"PREFIX nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  \n" +
+"PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>  \n" +
+"PREFIX time:   <http://www.w3.org/2006/time#>  \n" +
+"PREFIX teo:   <https://sbmi.uth.edu/ontology/TEO.owl#>  \n" +
+"PREFIX intervals:   <http://reference.data.gov.uk/def/intervals/>  \n" +
+"PREFIX greg:   <http://www.w3.org/ns/time/gregorian#>  \n" +
+"PREFIX ft3:   <https://fromtimetotime.linkeddata.es/ontology/fromtimetotime#>  \n" + intex;
+                                
+
+								/*jsonreq = "format=json&query=" + encodeURIComponent(intex);
+                                xhttp.open('POST', 'https://legalwhen.oeg-upm.net/namespace/kb/sparql', true);
+                                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+                                xhttp.send(jsonreq);*/
+								
+								var data = {
+                                    "query": intex
+                                };
+
+                                var jsonreq = JSON.stringify(data);
+
+                                xhttp.open('POST', 'qlegalwhen', true);
+                                xhttp.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+                                xhttp.send(jsonreq);
+								
+                            } catch (exception)
+                            {
+                                alert("Request failed" + textrec);
+                            }
+                        }
+
+
+
+
+
+                    </script>
+					
+					
+					
+					<style>
+					
+table {
+  width: 100%;
+  max-width: 90%;
+  height: 320px;
+  border-collapse: collapse;
+  margin: 50px auto;
+  background: white;
+}
+th {
+  background: steelblue;
+  height: 54px;
+  width: 25%;
+  font-weight: lighter;
+  text-shadow: 0 1px 0 #38678f;
+  color: white;
+  box-shadow: inset 0px 1px 2px #568ebd;
+  transition: all 0.2s;
+  text-align: center;
+}
+tr {
+  border-bottom: 1px solid #cccccc;
+}
+tr:last-child {
+  border-bottom: 0px;
+}
+td {
+  border-right: 1px solid #cccccc;
+  padding: 10px;
+  transition: all 0.2s;
+}
+td:last-child {
+  border-right: 0px;
+}
+td.selected {
+  background: #d7e4ef;
+  z-index: ;
+}
+td input {
+  font-size: 14px;
+  background: none;
+  outline: none;
+  border: 0;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+}
+td input:focus {
+  box-shadow: 0 1px 0 steelblue;
+  color: steelblue;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+::-moz-selection {
+  background: steelblue;
+  color: white;
+}
+
+.heavyTable {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: float 5s infinite;
+}
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 4px 0 0 0;
+}
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 4px;
+}
+					</style>
+					
+					<script>
+					
+					function onSuccess(json) {
+        const myObj = JSON.parse(json);
+  let myObj2 = myObj.results.bindings;
+  
+  let heads = myObj.head.vars;
+  let text = "<table class=\"heavyTable\"><thead><tr>"
+  for (let x in heads) {
+    	text += "<th>" + heads[x] + "</th>";
+  	}
+    text += "</thead></tr><tbody>";
+  for (let y in myObj2) {
+  text += "<tr>";
+    for (let x in heads) {
+    	text += "<td>" + myObj2[y][heads[x]].value + "</td>";
+  	}
+    text += "</tr>";
+  }
+  text += "</tbody></table>"    ;
+        document.getElementById("embedding").innerHTML = text;
+    }
+					
+					</script>
+					
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="main-wrapper" id="ref-demo">
+            
+			
+            <section class="footer-widget-area">
+				<footer><div class="item5" text-align="center" style="color: #fff">
+      
+	  <a href="https://github.com/mnavasloro/fromTimeToTime"><img src="img/aboutme3.png" width="80"  align="left"/></a>
+	  <center>
+	  <a href="http://www.oeg-upm.net/"><img src="img/oeg.png" width="80"  align="right"/></a>
+	  <p style="display: inline; vertical-align: middle">
+	  <br>This work is part of the PhD thesis by María Navas-Loro at the Ontology Engineering Group (Universidad Politécnica de Madrid). Please visit her <a href="http://marianavas.linkeddata.es" ><b>website</b></a> or the <a href="https://github.com/mnavasloro/fromTimeToTime"><b>GitHub</b></a> repository for more information.
+	  <br/>
+	  </p>
+	  </center>
+	 
+
+</div>
+				</footer>				
+				<footer>
+					<div class="container">
+						<div class="footer-content d-flex justify-content-between align-items-center flex-wrap">
+							<div class="logo">
+								        
+								<a href="index.html"><img src="img/fi.png" height="55px" alt="" hspace="10"></a>
+								<a href="index.html"><img src="img/upm.png" height="55px" alt="" hspace="10"></a>
+							</div>
+							<div class="copy-right-text">Copyright &copy; 2022  |  <div style="font-size:8px;">All rights of the design of the web are reserved to <a href="#">Dinomuz inc.</a> Website template designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></div></div>
+							<!--div class="footer-social">
+								<a href="#"><i class="fa fa-facebook"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-behance"></i></a>
+							</div-->
+						</div>
+					</div>
+				</footer>
+			</section>
+			<!-- End Footer Widget Area -->
+
+        </div>
+
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+// Loads a file with a sample into the textarea for the user to standard texts
+function samplejson()
+{
+var v = document.getElementById("selectquery");
+var archivo = v.options[v.selectedIndex].value;
+console.log(archivo);
+var client = new XMLHttpRequest();
+client.open('GET', 'queries/' + archivo);
+client.onreadystatechange = function () {
+    document.getElementById('inputText').value = client.responseText;
+}
+client.send();
+}
+        </script>
+
+
+
+    </body>
+</html>

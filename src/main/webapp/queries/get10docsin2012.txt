@@ -1,0 +1,9 @@
+SELECT DISTINCT ?doc ?event ?time ?year ?id
+WHERE {
+  	?doc ft3:hasEvent [ ?event [
+  	sem:hasTime [ ?time [ time:year ?year ] ] ]] .
+  	?doc ft3:hasEvent [ ?event [[
+  	ft3:hasID ?id ]] .
+  FILTER ((STR(?year)) = "2012")
+}
+LIMIT 10

@@ -1,0 +1,13 @@
+TYPE	infotimex3.type
+ID	tid
+VALUE	infotimex3.value
+SENTID	infotimex3.sentid
+FUNCTIONINDOCUMENT	infotimex3.functionInDocumentP
+TEMPORALFUNCTION	infotimex3.temporalFunction
+VALUEFROMFUNCTION	infotimex3.valueFromFunction
+MOD	infotimex3.mod
+ANCHORTIMEID	infotimex3.anchorTimeID
+BEGINPOINT	infotimex3.beginPoint
+ENDPOINT	infotimex3.endPoint
+QUANT	infotimex3.quant
+FREQ	infotimex3.freq

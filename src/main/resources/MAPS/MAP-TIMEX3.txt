@@ -1,0 +1,13 @@
+TYPE	type
+ID	tid
+VALUE	value
+SENTID	sentid
+FUNCTIONINDOCUMENT	functionInDocumentP
+TEMPORALFUNCTION	temporalFunction
+VALUEFROMFUNCTION	valueFromFunction
+MOD	mod
+ANCHORTIMEID	anchorTimeID
+BEGINPOINT	beginPoint
+ENDPOINT	endPoint
+QUANT	quant
+FREQ	freq

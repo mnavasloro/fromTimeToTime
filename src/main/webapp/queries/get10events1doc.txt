@@ -1,0 +1,7 @@
+SELECT DISTINCT ?event ?id
+WHERE {
+  	<https://fromtimetotime.linkeddata.es/doc/samples/doc002> ft3:hasEvent [ ?event [
+  	ft3:hasID ?id ]].
+  	
+}
+LIMIT 10

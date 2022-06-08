@@ -1,0 +1,3 @@
+TYPE	class
+ID	eid
+STEM	stem
